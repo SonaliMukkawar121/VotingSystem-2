@@ -1,0 +1,78 @@
+.login-title {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ECF0F5;
+}
+
+.login {
+  background:url('http://cdn.wallpapersafari.com/13/6/Mpsg2b.jpg');
+}
+
+.login-form {
+  box-sizing:border-box;
+  padding: top 10px;;
+	padding: bottom 10px;
+  margin:3% auto;
+  text-align:center;
+}
+
+
+.login-form input[type="button"] {
+  height:30px;
+  width:100px;
+  background:#fff;
+  border:1px solid hsl(33, 70%, 78%);
+  border-radius:20px;
+  color: slategrey;
+  text-transform:uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  cursor:pointer;
+}
+
+
+
+.login-header {
+  color:rgb(139, 28, 28);
+  text-align:center;
+  font-size:420%;
+}
+
+body {
+  background:url('http://cdn.wallpapersafari.com/13/6/Mpsg2b.jpg');
+  
+  margin:0px;
+  font-family: 'Ubuntu', sans-serif;
+	background-size:auto;
+}
+
+/* 
+.myContent{
+
+  width: auto;
+  padding: auto;
+  border: 5px solid black;
+  margin:auto;
+  align-items:baseline;
+  
+}
+ */
+
+
+button:hover {
+  opacity: 0.8;  
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: solid 3px black;
+}
+
+

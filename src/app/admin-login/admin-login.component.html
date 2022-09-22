@@ -1,0 +1,67 @@
+<!-- <app-header></app-header> -->
+<br><br><br><br><br><br><br><br>
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+<div class="myContent"  >
+<div class="container"  >
+<form #loginForm="ngForm" class= "login"(ngSubmit)="submitLoginForm(loginForm)">
+<div class="row">
+<div class="col-md-4">
+</div>
+<div class="col-md-4" style="text-align: center ;max-width: 100%;max-height: 100%;">
+<h1 style="text-align:center" class="login-header">Admin-Login</h1>
+<h6 style="text-align:center;color:#265593;font-size:small;font-size: 25px;">All fields are mandatory</h6>
+<div class="login-form">
+<div class="col" style="text-align:center">
+<label><b>Email-ID</b></label>
+</div>
+<div class="col; input-group"style="text-align:center">
+<input type="userid" name="userid" #useridRef="ngModel" class="form-control" ngModel required >
+</div>
+<div *ngIf="useridRef.errors && (useridRef.dirty || useridRef.touched)" style="text-align:center; color:#0037ff;">
+<div [hidden]="!useridRef.errors">
+<p>Admin id is mandatory</p>
+</div>
+</div>
+</div>
+<div class="form-group"style="text-align:center">
+<div class="col" style="text-align:center">
+<label><b>PASSWORD</b></label>
+</div>
+<div class="col; input-group">
+<input type="password" name="password" #passwordRef="ngModel" class="form-control" ngModel required>
+</div>
+<div *ngIf="passwordRef.errors && (passwordRef.dirty || passwordRef.touched)" style="text-align:center; color:#1e00ff;">
+<div [hidden]="!passwordRef.errors">
+<p>Admin Password is mandatory</p>
+</div>
+</div>
+</div>
+<div class="form-group" style="text-align:center">
+   <br>
+<button type="submit" [disabled]="!loginForm.form.valid" routerLink="admin" class="btn" style="font-size: 20px;">Login</button>
+</div>
+</div>
+<div class="col-md-4">
+</div>
+</div>
+<div *ngIf="showDiv;else:elseblock" style="color:green;text-align:center;">
+{{msg}}
+</div>
+</form>
+<ng-template #elseblock>
+<div>
+<h4 class="jumbotron" style="text-align:center;color: red;">{{msg}}</h4>
+   </div>
+   
+    <!-- <app-footer></app-footer>  -->
+
+
+
+
+
+
+
+
+
+
+   

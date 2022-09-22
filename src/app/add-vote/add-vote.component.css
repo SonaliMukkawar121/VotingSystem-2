@@ -1,0 +1,40 @@
+body{
+    height: 550px;
+    margin: 0;
+    display: flow-root;
+    grid-template-rows: 500px 100px;
+    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+    align-items: center;
+    justify-items: center;
+    background-image:url( 'https://images.unsplash.com/photo-1604065626882-47c3093bec11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dm90ZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: brown;
+  }
+  
+  .container{
+  
+      margin-top: 5%;
+  
+      max-width: 600px;
+  
+      height: 500px;
+  
+      width: 110%;
+  
+      background-color: rgb(225, 32, 32);
+  
+      padding: 25px 30px;
+  
+      border-radius: 5px;
+  
+      box-shadow: 0 5px 10px rgba(83, 218, 59, 0.15);
+     
+  
+    }
+  
+    .cardbook{
+  
+      margin-top:10%;
+  
+    }

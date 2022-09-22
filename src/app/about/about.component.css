@@ -1,0 +1,31 @@
+*{
+    padding : 0px;
+    margin : 0px;
+    box-sizing: border-box;
+
+    align-items: center;
+    
+}
+body {
+    height: 600px;
+    margin: 0;
+    display: flow-root;
+    grid-template-rows: 500px 100px;
+    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+    align-items: center;
+    justify-items: center;
+    background-image:url('https://media.istockphoto.com/photos/top-view-of-mobile-phone-glassespen-and-notebook-written-with-about-picture-id1304225026?k=20&m=1304225026&s=612x612&w=0&h=Pi9VhzbmLujvaLwbkMUr_AXZGWODy6GpP_yQlSf-kWk=');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+.text{
+    margin-top: 10%;
+    margin-left: 50px;
+    margin-right: 50%;
+    text-align: justify;
+}
+.photo{
+
+margin-right: 150px;
+    
+}

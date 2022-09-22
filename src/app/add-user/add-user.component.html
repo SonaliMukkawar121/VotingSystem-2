@@ -1,0 +1,128 @@
+<!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a routerLink="addUser"   routerLink="/adduser" class="nav-link">Create User Name</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="usersList" routerLink="/userlist" class="nav-link">All Users</a>
+    </li>
+  </ul>
+</nav> -->
+<!-- <app-navbar></app-navbar> -->
+
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <div class="container-fluid">
+    <a routerLink="/dashboard" class="navbar-brand">
+    <strong>Go to dashboard page</strong>
+    </a>
+    <a class="navbar-brand" href="#">User Dashboard</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>      
+      <div class="d-flex">        
+        <button class="btn btn-success" type="submit"  data-bs-toggle="modal" data-bs-target="#exampleModal">Add User</button>
+      </div>
+    </div>
+</nav>
+<div class="table">
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id.</th>
+
+        <th>  Name</th>
+        <th>Address</th>
+
+        <th>DOB</th>
+
+        <th>Gender</th>
+
+        <th>Contact</th>
+        <th>District</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let u of add-user; let i = index">
+        //<!-- <th scope="row">{{ i + 1 }}</th> 
+        <td>{{ u.id}}</td>
+        <td>{{ u.name}}</td>
+
+        <td>{{ u.address}}</td>
+        <td>{{ u.dob }}</td>
+        <td>{{ u.gender}}</td>
+        <td>{{ u.contact }}</td>
+        <td>{{ u.district }}</td>-->
+
+
+<div class="cardbook">
+  <div class="body">
+    <div class="col-md-6 offset-md-3">
+      <h3>Add User</h3>
+      <form (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm">
+        <div class="form-floating mb-3">
+          <label for="floatingInput">User Name</label>
+
+          <input type="text" class="form-control" id="userid" [(ngModel)]="addUser1.name" name="name" required
+            maxlength="21" #userid="ngModel" [ngClass]="{ 'is-invalid': f.submitted && userid.invalid }"
+            [ngModelOptions]="{standalone: true}" placeholder="Enter User Name">
+          <div *ngIf="(userid.touched||f.submitted )&& userid.errors?.['required']" class="invalid-feedback">
+
+            user Name is required.
+
+          </div>
+
+        </div>
+        <div class="form-floating mb-3">
+          <label for="floatingInput">Address </label>
+
+          <input type="text" class="form-control" id="userid" [(ngModel)]="addUser1.address" name="address" required
+            maxlength="21" #userid="ngModel" [ngClass]="{ 'is-invalid': f.submitted && userid.invalid }"
+            [ngModelOptions]="{standalone: true}" placeholder="Enter address">
+          <div *ngIf="(userid.touched||f.submitted )&& userid.errors?.['required']" class="invalid-feedback">
+
+            address is required.
+          </div>
+        </div>
+        <div class="form-floating mb-3">
+          <label for="floatingInput">DOB</label>
+          <input type="date" class="form-control" id="uesrid" [(ngModel)]="addUser1.DOB" name="DOB" required
+            maxlength="21" #userid="ngModel" [ngClass]="{ 'is-invalid': f.submitted && userid.invalid }"
+            [ngModelOptions]="{standalone: true}" placeholder="Enter dob">
+          <div *ngIf="(userid.touched||f.submitted )&& userid.errors?.['required']" class="invalid-feedback">
+            dob is required.
+          </div>
+          <div class="form-floating mb-3">
+            <label for="floatingInput">Gender</label>
+            <input type="text" class="form-control" id="uesrid" [(ngModel)]="addUser1.gender" name="gender" required
+              maxlength="21" #userid="ngModel" [ngClass]="{ 'is-invalid': f.submitted && userid.invalid }"
+              [ngModelOptions]="{standalone: true}" placeholder="Enter gender">
+            <div *ngIf="(userid.touched||f.submitted )&& userid.errors?.['required']" class="invalid-feedback">
+
+              gender is required.
+            </div>
+            <div class="form-floating mb-3">
+              <label for="floatingInput">Contact</label>
+              <input type="text" class="form-control" id="uesrid" [(ngModel)]="addUser1.contact" name="contact" required
+                maxlength="21" #userid="ngModel" [ngClass]="{ 'is-invalid': f.submitted && userid.invalid }"
+                [ngModelOptions]="{standalone: true}" placeholder="Enter contact">
+              <div *ngIf="(userid.touched||f.submitted )&& userid.errors?.['required']" class="invalid-feedback">
+
+                contact is required.
+              </div>
+              <div class="form-floating mb-3">
+                <label for="floatingInput">District</label>
+                <input type="text" class="form-control" id="uesrid" [(ngModel)]="addUser1.district" name="district"
+                  required maxlength="21" #userid="ngModel" [ngClass]="{ 'is-invalid': f.submitted && userid.invalid }"
+                  [ngModelOptions]="{standalone: true}" placeholder="Enter district">
+                <div *ngIf="(userid.touched||f.submitted )&& userid.errors?.['required']" class="invalid-feedback">
+
+                  district is required.
+                </div>
+                <button class="btn btn-success" type="submit">Submit</button>
+
+
+
+              </div>
+
+            </div>

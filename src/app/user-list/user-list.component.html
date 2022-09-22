@@ -1,0 +1,39 @@
+
+<!-- <app-navbar></app-navbar> -->
+
+<body ng-app="myApp" ng-controller="userctrl">
+  <div class="container" id="main">
+  <h2>UserList</h2>
+    <table class="table table-striped" style="width:100%">
+
+    <thead>
+      <tr>
+
+        <th>Id</th>
+       <th> Name</th>
+        <th>Address</th>
+        <th>DOB</th>
+        <th>Gender</th>
+        <th>Contact</th>
+        <th>District</th>
+        <th>Action</th>
+        <th>Action</th>
+        <tr></tr>
+    </thead>
+    <tbody>
+      
+      <tr *ngFor="let u of user| filter: nameSearch ">
+        <td>{{u.id }}</td>
+        <td>{{u.name }}</td>
+        <td>{{u.address }}</td>
+        <td>{{u.dob }}</td>
+        <td>{{u.gender}}</td>
+        <td>{{u.contact}}</td>
+        <td>{{u.district}}</td>
+        <td><br><button class="btn btn-info"  type="button"(click)="update()">Update</button><br></td> 
+        <td><br><button class="btn btn-info"  type="button" (click)="delete()">Delete</button><br></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</body>
